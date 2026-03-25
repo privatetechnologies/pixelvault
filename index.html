@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ── SEO META ── -->
+  <title>PixelVault — Curated Image Gallery for Photographers & Creators</title>
+  <meta name="description" content="PixelVault is a curated image-sharing platform showcasing photography, digital art, and visual stories from creators around the world. Discover stunning imagery with expert tips.">
+  <meta name="keywords" content="photography, image gallery, visual art, street photography, nature photography, minimalism, photo sharing">
+  <meta name="author" content="PixelVault">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://yourdomain.github.io/">
+
+  <!-- ── OPEN GRAPH ── -->
+  <meta property="og:title" content="PixelVault — Curated Image Gallery">
+  <meta property="og:description" content="Discover stunning photography and visual art from creators worldwide.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.github.io/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PixelVault — Curated Image Gallery">
+  <meta name="twitter:description" content="Stunning photography and visual art from creators worldwide.">
+
+  <!-- ── SCHEMA.ORG ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "PixelVault",
+    "url": "https://yourdomain.github.io/",
+    "description": "A curated image-sharing platform for photographers and visual creators.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://yourdomain.github.io/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23E05C3A'/><circle cx='16' cy='16' r='5' fill='white'/></svg>">
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <div id="nav-placeholder"></div>
+
+  <main>
+    <!-- ── HERO ── -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-kicker" aria-hidden="true">Visual Stories for the Modern Web</div>
+      <h1>Where <em>Great Images</em> Find Their Audience</h1>
+      <p class="hero-sub">
+        PixelVault is a curated gallery for photographers, designers, and visual creators — a place where compelling imagery meets thoughtful context.
+      </p>
+
+      <!-- Search -->
+      <div class="search-wrap" role="search">
+        <label for="search-input" class="sr-only">Search images</label>
+        <input type="search" id="search-input" class="search-input"
+               placeholder="Search photography, art, nature…"
+               aria-label="Search image posts">
+        <span class="search-icon" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+      </div>
+
+      <div class="hero-stats" aria-label="Platform statistics">
+        <div class="stat-item">
+          <span class="stat-num">12K+</span>
+          <span class="stat-label">Images Shared</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">3.4K</span>
+          <span class="stat-label">Contributors</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">98</span>
+          <span class="stat-label">Countries</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GALLERY ── -->
+    <section class="section" aria-labelledby="gallery-heading">
+      <div class="section-header">
+        <h2 class="section-title" id="gallery-heading">Latest <em>Submissions</em></h2>
+        <a href="/about.html" class="view-all">View All →</a>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="filter-bar" role="tablist" aria-label="Filter by category">
+        <button class="filter-btn active" data-cat="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-btn" data-cat="Photography Tips" role="tab" aria-selected="false">Photography Tips</button>
+        <button class="filter-btn" data-cat="Art & Culture" role="tab" aria-selected="false">Art & Culture</button>
+        <button class="filter-btn" data-cat="Nature & Wildlife" role="tab" aria-selected="false">Nature & Wildlife</button>
+        <!-- ── ADD NEW CATEGORY BUTTONS HERE ── -->
+      </div>
+
+      <!-- Grid — populated by JS from posts-data.js -->
+      <div class="grid grid-featured" id="main-grid" role="list" aria-label="Image gallery">
+        <!-- Posts are rendered here by main.js / renderGrid() -->
+        <!-- To add posts, edit js/posts-data.js -->
+      </div>
+    </section>
+
+    <!-- ── ABOUT STRIP ── -->
+    <section class="section" style="background:var(--bg-elevated); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+      <div style="max-width:700px; margin:0 auto; text-align:center;">
+        <h2 class="section-title" style="margin-bottom:1rem;">Built for Creators.<br><em>Discovered by Everyone.</em></h2>
+        <p style="color:var(--text-muted); font-size:1.05rem; line-height:1.8; margin-bottom:2rem;">
+          PixelVault gives photographers and visual artists a space to share their work with context — not just a thumbnail, but a story. Each post includes rich descriptions, expert tips, and curated resource links.
+        </p>
+        <a href="/about.html" style="display:inline-block; padding:12px 28px; border:1px solid var(--border-hover); border-radius:var(--radius-sm); font-size:0.85rem; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:var(--text); transition:all 0.25s;">
+          Learn About Us
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Toast -->
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <!-- ── SCRIPTS ── -->
+  <script src="/js/posts-data.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/components.js"></script>
+</body>
+</html>
