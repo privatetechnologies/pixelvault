@@ -4,132 +4,232 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ── SEO META ── -->
-  <title>PixelVault — Curated Image Gallery for Photographers & Creators</title>
-  <meta name="description" content="PixelVault is a curated image-sharing platform showcasing photography, digital art, and visual stories from creators around the world. Discover stunning imagery with expert tips.">
-  <meta name="keywords" content="photography, image gallery, visual art, street photography, nature photography, minimalism, photo sharing">
+  <!-- SEO META -->
+  <title>PixelVault Blog — Photography Tips, Art & Creative Insights</title>
+  <meta name="description" content="Explore the PixelVault blog for photography tips, visual storytelling guides, and creative inspiration from professional photographers and artists.">
+  <meta name="keywords" content="photography blog, art blog, photography tips, visual storytelling, photo editing, creative inspiration">
   <meta name="author" content="PixelVault">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://yourdomain.github.io/">
+  <link rel="canonical" href="https://privatetechnologies.github.io/pixelvault/blog.html">
 
-  <!-- ── OPEN GRAPH ── -->
-  <meta property="og:title" content="PixelVault — Curated Image Gallery">
-  <meta property="og:description" content="Discover stunning photography and visual art from creators worldwide.">
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="PixelVault Blog — Photography Tips & Creative Insights">
+  <meta property="og:description" content="Expert photography tips, visual storytelling guides, and creative inspiration.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.github.io/">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80">
+  <meta property="og:url" content="https://privatetechnologies.github.io/pixelvault/blog.html">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=1200&q=80">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PixelVault — Curated Image Gallery">
-  <meta name="twitter:description" content="Stunning photography and visual art from creators worldwide.">
-
-  <!-- ── SCHEMA.ORG ── -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "PixelVault",
-    "url": "https://yourdomain.github.io/",
-    "description": "A curated image-sharing platform for photographers and visual creators.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://yourdomain.github.io/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
 
   <link rel="stylesheet" href="/css/style.css">
+  <style>
+    /* Blog-specific styles */
+    .blog-hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: white;
+      padding: 80px 32px;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .blog-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .blog-hero p {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .blog-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 32px;
+    }
+    .blog-card {
+      background: var(--bg-elevated, #fff);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid var(--border, #e0e0e0);
+    }
+    .blog-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+    .blog-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      background: #f0f0f0;
+    }
+    .blog-content {
+      padding: 24px;
+    }
+    .blog-category {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      color: #E05C3A;
+      margin-bottom: 12px;
+    }
+    .blog-title {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .blog-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .blog-title a:hover {
+      color: #E05C3A;
+    }
+    .blog-meta {
+      font-size: 0.85rem;
+      color: var(--text-muted, #666);
+      margin-bottom: 16px;
+      display: flex;
+      gap: 16px;
+    }
+    .blog-excerpt {
+      color: var(--text, #333);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .read-more {
+      color: #E05C3A;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .read-more:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      .blog-hero h1 { font-size: 2rem; }
+      .blog-grid { grid-template-columns: 1fr; }
+    }
+  </style>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23E05C3A'/><circle cx='16' cy='16' r='5' fill='white'/></svg>">
 </head>
 <body>
 
-  <!-- ── NAV ── -->
+  <!-- NAV -->
   <div id="nav-placeholder"></div>
 
-  <main>
-    <!-- ── HERO ── -->
-    <section class="hero" aria-label="Hero">
-      <div class="hero-kicker" aria-hidden="true">Visual Stories for the Modern Web</div>
-      <h1>Where <em>Great Images</em> Find Their Audience</h1>
-      <p class="hero-sub">
-        PixelVault is a curated gallery for photographers, designers, and visual creators — a place where compelling imagery meets thoughtful context.
-      </p>
+  <!-- BLOG HERO -->
+  <section class="blog-hero">
+    <h1>PixelVault <em>Blog</em></h1>
+    <p>Photography tips, creative inspiration, and visual storytelling insights from our community</p>
+  </section>
 
-      <!-- Search -->
-      <div class="search-wrap" role="search">
-        <label for="search-input" class="sr-only">Search images</label>
-        <input type="search" id="search-input" class="search-input"
-               placeholder="Search photography, art, nature…"
-               aria-label="Search image posts">
-        <span class="search-icon" aria-hidden="true">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-          </svg>
-        </span>
-      </div>
+  <!-- BLOG GRID -->
+  <div class="blog-grid" id="blog-grid">
+    <!-- Blog posts will be loaded here -->
+    <div style="text-align: center; grid-column: 1/-1; padding: 60px;">Loading blog posts...</div>
+  </div>
 
-      <div class="hero-stats" aria-label="Platform statistics">
-        <div class="stat-item">
-          <span class="stat-num">12K+</span>
-          <span class="stat-label">Images Shared</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">3.4K</span>
-          <span class="stat-label">Contributors</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num">98</span>
-          <span class="stat-label">Countries</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── GALLERY ── -->
-    <section class="section" aria-labelledby="gallery-heading">
-      <div class="section-header">
-        <h2 class="section-title" id="gallery-heading">Latest <em>Submissions</em></h2>
-        <a href="/about.html" class="view-all">View All →</a>
-      </div>
-
-      <!-- Category Filter -->
-      <div class="filter-bar" role="tablist" aria-label="Filter by category">
-        <button class="filter-btn active" data-cat="all" role="tab" aria-selected="true">All</button>
-        <button class="filter-btn" data-cat="Photography Tips" role="tab" aria-selected="false">Photography Tips</button>
-        <button class="filter-btn" data-cat="Art & Culture" role="tab" aria-selected="false">Art & Culture</button>
-        <button class="filter-btn" data-cat="Nature & Wildlife" role="tab" aria-selected="false">Nature & Wildlife</button>
-        <!-- ── ADD NEW CATEGORY BUTTONS HERE ── -->
-      </div>
-
-      <!-- Grid — populated by JS from posts-data.js -->
-      <div class="grid grid-featured" id="main-grid" role="list" aria-label="Image gallery">
-        <!-- Posts are rendered here by main.js / renderGrid() -->
-        <!-- To add posts, edit js/posts-data.js -->
-      </div>
-    </section>
-
-    <!-- ── ABOUT STRIP ── -->
-    <section class="section" style="background:var(--bg-elevated); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
-      <div style="max-width:700px; margin:0 auto; text-align:center;">
-        <h2 class="section-title" style="margin-bottom:1rem;">Built for Creators.<br><em>Discovered by Everyone.</em></h2>
-        <p style="color:var(--text-muted); font-size:1.05rem; line-height:1.8; margin-bottom:2rem;">
-          PixelVault gives photographers and visual artists a space to share their work with context — not just a thumbnail, but a story. Each post includes rich descriptions, expert tips, and curated resource links.
-        </p>
-        <a href="/about.html" style="display:inline-block; padding:12px 28px; border:1px solid var(--border-hover); border-radius:var(--radius-sm); font-size:0.85rem; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:var(--text); transition:all 0.25s;">
-          Learn About Us
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <!-- ── FOOTER ── -->
+  <!-- FOOTER -->
   <div id="footer-placeholder"></div>
 
-  <!-- Toast -->
-  <div class="toast" role="status" aria-live="polite"></div>
+  <script>
+    // BLOG POSTS DATABASE
+    // To add a new blog post, just add a new object to this array
+    const blogPosts = [
+      {
+        id: 1,
+        title: "10 Essential Photography Tips for Beginners",
+        date: "May 11, 2026",
+        category: "Photography Tips",
+        excerpt: "Master the basics of composition, lighting, and camera settings with these essential tips for new photographers.",
+        image: "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=600&q=80",
+        url: "#"
+      },
+      {
+        id: 2,
+        title: "The Art of Street Photography: Capturing Candid Moments",
+        date: "May 8, 2026",
+        category: "Art & Culture",
+        excerpt: "Discover techniques for capturing authentic street photography while respecting your subjects and environment.",
+        image: "https://images.unsplash.com/photo-1444723121867-7a241cac1ff3?w=600&q=80",
+        url: "#"
+      },
+      {
+        id: 3,
+        title: "Wildlife Photography: How to Get Stunning Animal Shots",
+        date: "May 5, 2026",
+        category: "Nature & Wildlife",
+        excerpt: "Patience, preparation, and the right gear — learn the secrets of professional wildlife photographers.",
+        image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&q=80",
+        url: "#"
+      },
+      {
+        id: 4,
+        title: "Editing Workflow: From RAW to Finished Image",
+        date: "April 28, 2026",
+        category: "Photography Tips",
+        excerpt: "Streamline your post-processing with this efficient editing workflow using Lightroom and Photoshop.",
+        image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&q=80",
+        url: "#"
+      },
+      {
+        id: 5,
+        title: "Minimalist Photography: Less is More",
+        date: "April 22, 2026",
+        category: "Art & Culture",
+        excerpt: "Explore the beauty of negative space, simple compositions, and the power of subtraction in visual art.",
+        image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80",
+        url: "#"
+      },
+      {
+        id: 6,
+        title: "Photographing Landscapes: Golden Hour Guide",
+        date: "April 15, 2026",
+        category: "Nature & Wildlife",
+        excerpt: "Make the most of magical lighting conditions with this complete guide to golden and blue hour photography.",
+        image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=600&q=80",
+        url: "#"
+      }
+    ];
 
-  <!-- ── SCRIPTS ── -->
-  <script src="/js/posts-data.js"></script>
-  <script src="/js/main.js"></script>
+    // Render blog posts
+    function renderBlogPosts() {
+      const grid = document.getElementById('blog-grid');
+      if (!grid) return;
+      
+      const postsHTML = blogPosts.map(post => `
+        <article class="blog-card">
+          <img class="blog-image" src="${post.image}" alt="${post.title}" loading="lazy">
+          <div class="blog-content">
+            <div class="blog-category">${post.category}</div>
+            <h2 class="blog-title"><a href="${post.url}">${post.title}</a></h2>
+            <div class="blog-meta">
+              <span>📅 ${post.date}</span>
+              <span>✏️ 5 min read</span>
+            </div>
+            <p class="blog-excerpt">${post.excerpt}</p>
+            <a href="${post.url}" class="read-more">Read More →</a>
+          </div>
+        </article>
+      `).join('');
+      
+      grid.innerHTML = postsHTML;
+    }
+    
+    // Load when page is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', renderBlogPosts);
+    } else {
+      renderBlogPosts();
+    }
+  </script>
+  
   <script src="/js/components.js"></script>
 </body>
 </html>
